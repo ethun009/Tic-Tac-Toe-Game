@@ -249,6 +249,15 @@ hr {
 }
 
 @media (max-width: 1100px) {
+
+
+  .maindisplay {
+  padding: 40px;
+  height: 50vh;
+  
+}
+
+  
   footer {
     padding-top: 100px;
   }
