@@ -11,7 +11,7 @@
   --orange: #F2C14E;
   --winning-blocks: #2d414b;
   --draw-blocks: red;
-  --turn-color :var(--orange)
+  --turn-color :var(--orange) ;
 }
 
 body {
