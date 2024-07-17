@@ -53,7 +53,7 @@ h2 {
 }
 
 .game {
-  min-width: 300px;
+  width: 300px;
   display: flex;
   flex-wrap: wrap;
   margin-top: 40px;
