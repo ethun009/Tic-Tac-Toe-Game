@@ -1,6 +1,8 @@
 let playerText = document.querySelector(".playerText");
 let boxes = Array.from(document.getElementsByClassName("box"));
 let restartBtn = document.querySelector(".reset");
+let turnX = document.querySelector(".turn1")
+let turnO = document.querySelector(".turn2")
 
 let winnerIndicator = getComputedStyle(document.body).getPropertyValue(
   "--winning-blocks"
@@ -8,10 +10,11 @@ let winnerIndicator = getComputedStyle(document.body).getPropertyValue(
 let drawIndicator = getComputedStyle(document.body).getPropertyValue(
   "--draw-blocks"
 );
-
+turnX.style.color ="var(--turn-color)"
 const O_TEXT = "O";
 const X_TEXT = "X";
 let currentPlayer = X_TEXT;
+
 let spaces = Array(9).fill(null);
 let countnum = 0;
 
@@ -42,6 +45,14 @@ function boxClicked(e) {
     }
 
     currentPlayer = currentPlayer == X_TEXT ? O_TEXT : X_TEXT;
+    if (currentPlayer == X_TEXT) {
+        turnX.style.color ="var(--turn-color)"
+        turnO.style.color ="#333" 
+    }
+    else {
+      turnO.style.color ="var(--turn-color)"
+      turnX.style.color ="#333"
+    }
   }
   if (countnum === 9) {
     playerText.innerText = `It's a tie !!!`;
@@ -76,7 +87,8 @@ restartBtn.addEventListener("click", restart);
 
 function restart() {
   spaces.fill(null);
-
+  turnX.style.color ="var(--turn-color)"
+  turnO.style.color ="#333"
   boxes.forEach((box) => {
     box.innerText = "";
     box.style.backgroundColor = "";
