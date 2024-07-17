@@ -249,8 +249,33 @@ hr {
 }
 
 @media (max-width: 1100px) {
+  .maindisplay {
+   height: 90vh;
+    
+   }
 
+  .game {
+    scale: 2;
+  }  
+
+  .heading {
+    position: absolute;
+    top: 10%;
   
+    text-align: center;
+    scale: 2;
+  }
+  .reset {
+  position: absolute;
+  top: 65%;
+  left: calc(50% - 50px );
+  scale: 2;
+  }
+  .playerText {
+  top: 75%;
+  }
+  
+
   footer {
     padding-top: 100px;
   }
